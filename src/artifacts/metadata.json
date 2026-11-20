@@ -1,0 +1,39 @@
+{
+  "versi_model": "1.0.0",
+  "dilatih": "2026-11-20T10:41:16",
+  "algoritma": "HistGradientBoostingClassifier + fitur turunan (src/features.py)",
+  "hyperparameter": {
+    "learning_rate": 0.06,
+    "max_leaf_nodes": 8,
+    "min_samples_leaf": 60,
+    "l2_regularization": 0.0
+  },
+  "fitur_masukan": [
+    "suhu_leleh_C",
+    "suhu_cetakan_C",
+    "tekanan_injeksi_bar",
+    "kecepatan_injeksi_mm_s",
+    "waktu_pendinginan_s",
+    "waktu_siklus_s",
+    "kelembaban_bahan_pct",
+    "mesin",
+    "shift",
+    "bahan"
+  ],
+  "target": "cacat",
+  "threshold": 0.045,
+  "asumsi_biaya_rp": {
+    "cacat_lolos": 500000,
+    "bagus_tersisih": 25000
+  },
+  "metrik": {
+    "baseline_pr_val": 0.48325014790960924,
+    "baseline_pr_test": 0.5364038754710408,
+    "final_pr_val": 0.6481047013321775,
+    "final_pr_test": 0.691737401068794
+  },
+  "seed": 42,
+  "sklearn": "1.9.1",
+  "python": "3.12.3",
+  "catatan": "Masukan mentah (kolom seperti raw.csv) harus lewat src.features.clean sebelum predict_proba."
+}
